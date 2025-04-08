@@ -3,6 +3,7 @@ from glob import glob
 from tqdm import tqdm
 from pathlib import Path
 from typing import Optional, Union, Tuple
+from skimage import io, morphology
 
 import numpy as np
 import imageio.v3 as imageio
@@ -190,7 +191,15 @@ def automatic_instance_segmentation(
     # Before starting to annotate, if at all desired, store the automatic segmentations in the first stage.
     if output_path is not None:
         _output_path = _add_suffix_to_output_path(output_path, "_automatic") if annotate else output_path
-        imageio.imwrite(_output_path, instances, compression="zlib")
+        instances = morphology.label(instances)
+        # Continuous labels, remove holes
+        unique_labels = np.unique(instances[instances != 0])
+        contig_labels = np.arange(1, len(unique_labels) + 1)
+        if not np.all(unique_labels == contig_labels):
+            indexer = np.zeros(np.max(instances) + 1, dtype=int)
+            indexer[unique_labels] = contig_labels
+            instances = indexer[instances]
+        imageio.imwrite(_output_path, instances.astype(np.uint16))
         print(f"The automatic segmentation results are stored at '{os.path.abspath(_output_path)}'.")
 
     # Allow opening the automatic segmentation in the annotator for further annotation, if desired.
