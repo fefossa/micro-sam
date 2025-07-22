@@ -23,7 +23,7 @@ def finetune_lm_generalist(args):
 
     # all the stuff we need for training
     train_loader, val_loader = get_generalist_lm_loaders(input_path=args.input_path, patch_shape=patch_shape)
-    scheduler_kwargs = {"mode": "min", "factor": 0.9, "patience": 5, "verbose": True}
+    scheduler_kwargs = {"mode": "min", "factor": 0.9, "patience": 5}
 
     # Run training.
     sam_training.train_sam(
@@ -64,7 +64,7 @@ def main():
         help="The model type to use for fine-tuning. Either 'vit_t', 'vit_b', 'vit_l' or 'vit_h'."
     )
     parser.add_argument(
-        "--save_root", "-s", default="/mnt/vast-nhr/projects/cidas/cca/experiments/micro_sam",
+        "--save_root", "-s", default="/mnt/vast-nhr/projects/cidas/cca/experiments/micro_sam/v4",
         help="Where to save the checkpoint and logs. By default they will be saved where this script is run from."
     )
     parser.add_argument(

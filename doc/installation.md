@@ -11,7 +11,7 @@ We do **not support** installing `micro_sam` with pip.
 
 ## From conda
 
-`conda` is a python package manager. If you don't have it installed yet you can follow the instructions [here](https://conda-forge.org/download/) to set it up on your system.
+`conda` is a python package manager. If you don't have it installed yet you can follow the instructions [here](https://conda-forge.org/download/) or look into our [installation FAQs](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html#faq) to set it up on your system.
 Please make sure that you are using an up-to-date version of conda to install `micro_sam`.
 You can also use [mamba](https://mamba.readthedocs.io/en/latest/), which is a drop-in replacement for conda, to install it. In this case, just replace the `conda` commands below with `mamba`.
 
@@ -85,7 +85,7 @@ pip install trackastra
 
 ## From installer
 
-**Note: The installers are not yet up-to-date with the latest version of microsam (v1.4.0). We will update them in the next few days.**
+**Note: The installers are not yet up-to-date with the latest version of micro-sam (v1.4.0 onwards). We will update them in the next few weeks.**
 
 We also provide installers for Linux and Windows:
 - [Linux](https://owncloud.gwdg.de/index.php/s/Fyf57WZuiX1NyXs)

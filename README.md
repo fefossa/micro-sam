@@ -20,7 +20,7 @@ We implement napari applications for:
 <img src="https://github.com/computational-cell-analytics/micro-sam/assets/4263537/aefbf99f-e73a-4125-bb49-2e6592367a64" width="256">
 
 If you run into any problems or have questions regarding our tool please open an [issue](https://github.com/computational-cell-analytics/micro-sam/issues/new/choose) on Github or reach out via [image.sc](https://forum.image.sc/) using the tag `micro-sam`, and tagging [@constantinpape](https://forum.image.sc/u/constantinpape/summary) and [@anwai98](https://forum.image.sc/u/anwai98/summary).
-
+You can follow recent updates on `micro_sam` in our [news feed](https://forum.image.sc/t/microsam-news-feed).
 
 ## Installation and Usage
 
@@ -58,6 +58,6 @@ We have also built follow-up work that is based on `micro_sam`:
 - https://github.com/computational-cell-analytics/medico-sam - improves SAM for medical imaging.
 - https://github.com/computational-cell-analytics/peft-sam - studies parameter efficient fine-tuning for SAM.
 
-## Release Oveverview
+## Release Overview
 
 You can find an overview of changes introduced in previous releases [here](https://github.com/computational-cell-analytics/micro-sam/blob/master/RELEASE_OVERVIEW.md).
